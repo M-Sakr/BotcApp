@@ -10,12 +10,12 @@ namespace BotcApp.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SpotTradingController : ControllerBase
+    public class SpotTradingPersonalController : ControllerBase
     {
         private readonly BinanceClient _client;
         private const string DollarCoin = "USDT";
 
-        public SpotTradingController(BinanceClient client)
+        public SpotTradingPersonalControllers(BinanceClient client)
         {
             _client = client;
         }
