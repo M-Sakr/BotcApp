@@ -1,6 +1,6 @@
 # Botc.App
 
-## Our goal to build a crypto reports and bot App, to help you  trade in stress free environment
+## Our goal to build a crypto reports and bot App, to help you  trade in stress free way
 
 Work in progress.
 using .net core 5.0
