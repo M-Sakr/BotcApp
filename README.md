@@ -11,7 +11,7 @@ using .net core 5.0, it supports windows, linux and MacOs
 
 How to run it:
 - download .net core 5 https://dotnet.microsoft.com/download/dotnet/5.0
-- add your binance api key and api secret, you need permission reading, no other permission needed, see the picture binance api screenshot.
+- add your binance api key and api secret to appsetting.json, you need permission reading, no other permission needed, see the picture binance api screenshot.
 - in the repository directory run this code open terminal/cmd and run this code `dotnet run`
 
 ## License
