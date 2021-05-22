@@ -8,6 +8,7 @@ using Binance.Net.Enums;
 
 namespace BotcApp.Controllers
 {
+    [ApiExplorerSettings(IgnoreApi = true)]
     [Route("api/[controller]")]
     [ApiController]
     public class SpotTradingPersonalController : ControllerBase
@@ -28,7 +29,7 @@ namespace BotcApp.Controllers
         }
 
         [HttpGet]
-        public IEnumerable<CoinAggregation> Post()
+        public IEnumerable<CoinAggregation> Get()
         {
             var accountInfo = _client.General.GetAccountInfo();
             if (!accountInfo.Success)

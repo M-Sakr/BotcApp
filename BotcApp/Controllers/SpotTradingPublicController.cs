@@ -19,7 +19,7 @@ namespace BotcApp.Controllers
         private BinanceClient _client;
         private const string DollarCoin = "USDT";
 
-        [HttpGet]
+        [HttpPost]
         public IEnumerable<CoinAggregation> Post(string apiKey, string apiSecret, int daysBack = 30)
         {
             _client = new BinanceClient(new BinanceClientOptions
