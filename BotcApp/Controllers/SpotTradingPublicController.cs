@@ -19,6 +19,13 @@ namespace BotcApp.Controllers
         private BinanceClient _client;
         private const string DollarCoin = "USDT";
 
+        /// <summary>
+        /// Get orders aggregation
+        /// </summary>
+        /// <param name="apiKey">Your binance api key, with permission read data only, no trading permission or any other permission needed</param>
+        /// <param name="apiSecret">Your binance api secret</param>
+        /// <param name="daysBack">loading orders for how many days back, eg: 30 days back which mean the last month</param>
+        /// <returns></returns>
         [HttpPost]
         public IEnumerable<CoinAggregation> Post(string apiKey, string apiSecret, int daysBack = 30)
         {
