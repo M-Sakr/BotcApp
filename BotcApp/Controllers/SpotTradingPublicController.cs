@@ -9,6 +9,9 @@ using System.Linq;
 
 namespace BotcApp.Controllers
 {
+    /// <summary>
+    /// 
+    /// </summary>
     [Route("api/[controller]")]
     [ApiController]
     public class SpotTradingPublicController : ControllerBase
@@ -17,7 +20,7 @@ namespace BotcApp.Controllers
         private const string DollarCoin = "USDT";
 
         [HttpGet]
-        public IEnumerable<CoinAggregation> Post(string apiKey, string apiSecret, DateTime dateFrom, DateTime dateTo)
+        public IEnumerable<CoinAggregation> Post(string apiKey, string apiSecret, int daysBack = 30)
         {
             _client = new BinanceClient(new BinanceClientOptions
             {
@@ -43,7 +46,7 @@ namespace BotcApp.Controllers
 
                 var pair = binanceBalance.Asset + DollarCoin;
 
-                var orderList = _client.Spot.Order.GetAllOrders(pair, null, dateFrom, dateTo)?.Data?.ToList();
+                var orderList = _client.Spot.Order.GetAllOrders(pair, null, DateTime.Today.AddDays(-daysBack).Date)?.Data?.ToList();
                 if (orderList == null)
                     continue;
 
