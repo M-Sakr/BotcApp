@@ -22,7 +22,7 @@ namespace BotcApp.Controllers
         }
 
         [HttpGet("OpenOrders")]
-        public IEnumerable<BinanceOrder> Get()
+        public IEnumerable<BinanceOrder> GetOpenOrders()
         {
             var openOrders = _client.Spot.Order.GetOpenOrders();
             return openOrders.Data;
