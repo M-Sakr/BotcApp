@@ -15,7 +15,7 @@ namespace BotcApp.Controllers
         private readonly BinanceClient _client;
         private const string DollarCoin = "USDT";
 
-        public SpotTradingPersonalControllers(BinanceClient client)
+        public SpotTradingPersonalController(BinanceClient client)
         {
             _client = client;
         }
